@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react'
-import noteContext from '../context/notes/noteContext'
+import React, { useContext, useEffect } from 'react';
 const About = () => {
   return (
     <>
@@ -14,7 +13,6 @@ const About = () => {
       <p>macOS</p>
       <p>Windows</p>
       <p>Web</p>
-
     </>
   )
 }
