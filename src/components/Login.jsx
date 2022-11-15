@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './login.css'
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        const host="https://appmynotes.herokuapp.com"
+        const host = "https://appmynotes.herokuapp.com"
         e.preventDefault();
         //API CALL
         const response = await fetch(`${host}/api/auth/login`, {
@@ -83,6 +83,10 @@ const Login = (props) => {
                                 >
                                     Sign in
                                 </button>
+                                <div className="text-center">
+                                    <p>Not a member? <Link to="/signup">Register Now</Link></p>
+                                </div>
+
                             </form>
                         </div>
                     </div>
