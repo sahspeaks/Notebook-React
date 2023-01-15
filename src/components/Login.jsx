@@ -6,7 +6,7 @@ const Login = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        const host = "https://appmynotes.herokuapp.com"
+        const host = "https://appmynotes.onrender.com"
         e.preventDefault();
         //API CALL
         const response = await fetch(`${host}/api/auth/login`, {
