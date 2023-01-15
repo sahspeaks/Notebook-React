@@ -6,7 +6,7 @@ const Signup = (props) => {
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    const host="https://appmynotes.herokuapp.com";
+    const host="https://appmynotes.onrender.com";
     e.preventDefault();
     const { name, email, password } = credentials;
     const response = await fetch(`${host}/api/auth/createuser`, {
